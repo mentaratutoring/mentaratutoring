@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentara Tutoring</title>
+  <style>
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {font-family:Arial,sans-serif;color:#fff;background:#0e1a26;line-height:1.6;}
+    header {position:fixed;top:0;width:100%;background:rgba(0,0,0,0.8);display:flex;justify-content:space-between;align-items:center;padding:20px 50px;z-index:100;}
+    header h1 {font-size:24px;font-weight:bold;}
+    nav a {color:#fff;text-decoration:none;margin:0 15px;font-weight:bold;transition:color 0.3s;}
+    nav a:hover {color:#f0c674;}
+    section {padding:100px 50px;min-height:100vh;}
+    .hero {background:url('https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;display:flex;align-items:center;}
+    .hero .content {max-width:400px;background:rgba(0,0,0,0.6);padding:30px;border-radius:5px;}
+    .hero h2 {font-size:36px;margin-bottom:15px;}
+    .hero p {color:#ddd;}
+    .about {background:#1a2a38;display:flex;flex-wrap:wrap;align-items:center;gap:30px;}
+    .about img {width:400px;border-radius:8px;}
+    .about-text {max-width:600px;}
+    .about-text h2 {font-size:32px;margin-bottom:15px;}
+    .how-it-works {background:#fff;color:#333;text-align:center;}
+    .how-it-works h2 {font-size:32px;margin-bottom:30px;}
+    .steps {display:flex;flex-wrap:wrap;justify-content:center;gap:40px;}
+    .step {max-width:250px;}
+    .step img {width:60px;margin-bottom:15px;}
+    .contact {background:#111;}
+    .contact h2 {text-align:center;margin-bottom:30px;}
+    form {max-width:500px;margin:auto;display:flex;flex-direction:column;gap:15px;}
+    input,textarea {padding:10px;border:none;border-radius:4px;}
+    button {background:#f0c674;color:#000;padding:10px;border:none;font-weight:bold;cursor:pointer;}
+    footer {background:#000;text-align:center;padding:15px;font-size:14px;}
+    @media(max-width:768px){.about{flex-direction:column;text-align:center;}.about img{width:100%;}.steps{flex-direction:column;}}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Mentara</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#how">How It Works</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="content">
+      <h2>Unlock Your Potential</h2>
+      <p>Learn from those who excelled before you.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="about" id="about">
+    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Tutoring Session">
+    <div class="about-text">
+      <h2>About Our Service</h2>
+      <p>Our tutoring service connects you with former students who excelled in the very subjects they now tutor. With firsthand experience and proven success, our tutors provide personalized guidance to help you achieve your academic goals.</p>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works" id="how">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/159/159832.png" alt="Contact">
+        <h3>Contact Us</h3>
+        <p>Email us at <b>mentaratutoring@gmail.com</b> or call +971 54 333 1071</p>
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="Understand">
+        <h3>Understanding Your Child's Needs</h3>
+        <p>We’ll discuss time arrangements and any requirements you have.</p>
+      </div>
+      <div class="step">
+        <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Match">
+        <h3>Finding the Right Match</h3>
+        <p>Your child will be assigned a qualified tutor.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="contact" id="contact">
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/yourformid" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    &copy; 2025 Mentara Tutoring. All rights reserved.
+  </footer>
+
+  <script>
+    document.querySelectorAll('nav a').forEach(link=>{link.addEventListener('click',function(e){e.preventDefault();document.querySelector(this.getAttribute('href')).scrollIntoView({behavior:'smooth'});});});
+  </script>
+</body>
+</html>
+
+
